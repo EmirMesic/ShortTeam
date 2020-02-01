@@ -13,9 +13,16 @@ public class Karta {
 	private double vrijeme;
 	private double setVrijeme;
 	
-	public Karta(int idKarta, double vrijeme) {
+	public Karta() {
 		numObj++;
-		this.idKarta = idKarta;
+		this.idKarta = numObj;
+		//this.cijena = cijena;
+		this.vrijeme = 1;		
+	}
+	
+	public Karta(double vrijeme) {
+		numObj++;
+		this.idKarta = numObj;
 		//this.cijena = cijena;
 		this.vrijeme = vrijeme;		
 	}
@@ -35,9 +42,9 @@ public class Karta {
 	}
 
 	public double getCijenaSat() {
-		return cijena;
+		return cijena1h*vrijeme;
 	}
-
+	
 	public void setCijena(double cijena) {
 		this.cijena = cijena;
 	}
