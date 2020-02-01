@@ -51,13 +51,13 @@ public class SatnaKarta extends Karta{
 	}
 
 	@Override
-	void addKovanica(Integer kov) {
+	void addKovanica(Kovanica kov) {
 		super.listKovanice.add(kov);
 		
 	}
 
 	@Override
-	ArrayList<Integer> getKOvanice() {
+	ArrayList<Kovanica> getKOvanice() {
 		return super.listKovanice;
 	}
 	

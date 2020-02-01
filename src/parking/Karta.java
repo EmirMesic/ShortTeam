@@ -6,11 +6,11 @@ public abstract class Karta {
 	
 	public int idKarta;
 	
-	ArrayList<Integer> listKovanice = new ArrayList<>();
+	ArrayList<Kovanica> listKovanice = new ArrayList<>();
 	
-	abstract void addKovanica(Integer kov);
+	abstract void addKovanica(Kovanica kov);
 	
-	abstract ArrayList<Integer> getKOvanice();
+	abstract ArrayList<Kovanica> getKOvanice();
 	
 	/* ID broj karte */
 	abstract int getIdKarta();
