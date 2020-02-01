@@ -8,9 +8,13 @@ public abstract class Karta {
 	
 	ArrayList<Kovanica> listKovanice = new ArrayList<>();
 	
-	abstract void addKovanica(Kovanica kov);
+	int suma;
 	
-	abstract ArrayList<Kovanica> getKOvanice();
+	abstract void addKovanica(int broj, Kovanica kov);
+	
+	abstract int getBrojKovanica();
+	
+	abstract ArrayList<Kovanica> getKovanice();
 	
 	/* ID broj karte */
 	abstract int getIdKarta();

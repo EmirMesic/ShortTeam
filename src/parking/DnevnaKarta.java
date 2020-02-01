@@ -41,22 +41,28 @@ public class DnevnaKarta extends Karta{
 
 	public double getVrijeme() {
 		return vrijeme;
-	}	
+	}
+
+	@Override
+	void addKovanica(int broj, Kovanica kov) {
+		super.suma += broj;
+		super.listKovanice.add(kov);		
+	}
+
+	@Override
+	ArrayList<Kovanica> getKovanice() {		
+		return super.listKovanice;
+	}
+
+	@Override
+	int getBrojKovanica() {
+		return super.suma;
+	}
 	
 	@Override
 	public String toString() {
 		return "Dnevna karta: " + getIdKarta() + ", cijena: " + this.getCijenaDana() + ", vrijeme: "
 				+ dan + "h" ;
-	}
-
-	@Override
-	void addKovanica(Kovanica kov) {
-		super.listKovanice.add(kov);		
-	}
-
-	@Override
-	ArrayList<Kovanica> getKOvanice() {		
-		return super.listKovanice;
 	}
 	
 }

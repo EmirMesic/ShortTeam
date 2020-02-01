@@ -43,6 +43,7 @@ public class SatnaKarta extends Karta{
 	}
 
 	public void setVrijeme(double vrijeme) {
+		this.vrijeme = vrijeme;
 	}
 
 	@Override
@@ -51,16 +52,20 @@ public class SatnaKarta extends Karta{
 	}
 
 	@Override
-	void addKovanica(Kovanica kov) {
+	void addKovanica(int broj, Kovanica kov) {
+		super.suma += broj;
 		super.listKovanice.add(kov);
 		
 	}
 
 	@Override
-	ArrayList<Kovanica> getKOvanice() {
+	ArrayList<Kovanica> getKovanice() {
 		return super.listKovanice;
 	}
 	
-	
+	@Override
+	int getBrojKovanica() {
+		return super.suma;
+	}
 
 }
