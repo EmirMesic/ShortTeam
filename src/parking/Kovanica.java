@@ -20,7 +20,7 @@ public class Kovanica {
     }
 
     //mehanizam za provjeru validnosti unosenja kovanica
-    public boolean unosenjeKovanica(int brojKovanica, double vrijednostKovanica) {
+    public static boolean unosenjeKovanica(int brojKovanica, double vrijednostKovanica) {
 
         if (vrijednostKovanica != 0.5 && vrijednostKovanica != 1 && vrijednostKovanica != 2) {
             System.out.println("Greska. Unesite ponovo");
