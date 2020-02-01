@@ -53,5 +53,4 @@ public class Kasa {
         }
         return sumaKovanica05 + sumaKovanica1 + sumaKovanica2;
     }
-
 }
