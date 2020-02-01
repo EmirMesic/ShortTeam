@@ -38,14 +38,14 @@ public class parkingMain {
 				break;
 			case 3:
 				break;
-				print.parkingTicket();
+//				print.parkingTicket();
 			case 4:
 				break;
-				print.allTicket();
+//				print.allTicket();
 			default:
 				break;
 			}
-			
+			System.out.println("Cijena dana: " + dnevnaKarta.getCijenaDana() + dnevnaKarta.getCijenaSat());
 			date = new Date();
 			System.out.println(" ");
 			System.out.println("Vrijeme: " + dateFormat.format(date));
