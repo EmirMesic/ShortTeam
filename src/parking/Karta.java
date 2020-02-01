@@ -1,65 +1,26 @@
 package parking;
 
-public class Karta {
+import java.util.ArrayList;
 
-	private static int numObj;
+public abstract class Karta {
 	
-	private int idKarta;
-	private double cijena;
+	public int idKarta;
 	
-	private double cijena1h = 1;
-	private double cijenaPolaSata = 0.5;
+	ArrayList<Kovanica> listKovanice = new ArrayList<>();
 	
-	private double vrijeme;
-	private double setVrijeme;
+	abstract void addKovanica(Kovanica kov);
 	
-	public Karta() {
-		numObj++;
-		this.idKarta = numObj;
-		//this.cijena = cijena;
-		this.vrijeme = 1;		
-	}
+	abstract ArrayList<Kovanica> getKOvanice();
 	
-	public Karta(double vrijeme) {
-		numObj++;
-		this.idKarta = numObj;
-		//this.cijena = cijena;
-		this.vrijeme = vrijeme;		
-	}
 	/* ID broj karte */
-	public int getIdKarta() {
-		return idKarta;
-	}
+	abstract int getIdKarta();
 
-	public void setIdKarta(int idKarta) {
-		this.idKarta = idKarta;
-	}
+	/* Postavljanje cijene */
+	abstract void setCijena(double cijena);
 	
-	/* Cijena sata */
+	abstract double getCijena();
 	
-	public void cijenaSat(double novaCijenaSat) {
-		this.cijena = novaCijenaSat;
-	}
+	/* Postavljanje i vracanje vremena */
+	abstract double getVrijeme();
 
-	public double getCijenaSat() {
-		return cijena1h*vrijeme;
-	}
-	
-	public void setCijena(double cijena) {
-		this.cijena = cijena;
-	}
-	
-	public double getVrijeme() {
-		return vrijeme*setVrijeme;
-	}
-	
-	public void setVrijeme(double vrijeme) {
-		this.setVrijeme = vrijeme;
-	}
-
-	@Override
-	public String toString() {
-		return "ID karte : " + idKarta + ", cijena : " + cijena + ", vrijeme : " + vrijeme + " sati";
-	}	
-	
 }
