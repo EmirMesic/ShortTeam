@@ -19,7 +19,7 @@ public class Kovanica {
         this.vrijednostKovanice = vrijednostKovanice;
     }
 
-    //mehanizam za provjeru validnosti unosenja kovanica
+    //mehanizam za provjeru validnosti unosenja kovanica/haha
     public static boolean unosenjeKovanica(int brojKovanica, double vrijednostKovanica) {
 
         if (vrijednostKovanica != 0.5 && vrijednostKovanica != 1 && vrijednostKovanica != 2) {
