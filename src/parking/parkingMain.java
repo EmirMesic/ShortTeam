@@ -11,6 +11,7 @@ public class parkingMain {
 		Print print = new Print();
 		DnevnaKarta dnevnaKarta = new DnevnaKarta();
 		SatnaKarta satnaKarta = new SatnaKarta();
+		 
 
 		Scanner input = new Scanner(System.in);
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -56,7 +57,8 @@ public class parkingMain {
 
 				while (brojKovanica != 0)
 					if (Kovanica.unosenjeKovanica(brojKovanica, kovanica)) {
-						karta.addKovanica(brojKovanica, kovanica);
+						
+//						karta.addKovanica(brojKovanica, kovanica);
 					} else {
 						System.out.println("Broj kovanica: ");
 						brojKovanica = input.nextInt();
